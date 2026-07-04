@@ -2,7 +2,8 @@ import cv2
 from ultralytics import YOLO
 
 # Kendi eğittiğimiz modeli yüklüyoruz (Klasör adının train2 veya train3 olup olmadığını kontrol et)
-model = YOLO('runs/detect/train-2/weights/best.pt')
+# main.py içindeki ilgili satır:
+results = model(frame, conf=0.60)
 # Ubuntu'da varsayılan kamerayı başlat
 cap = cv2.VideoCapture(0)
 
